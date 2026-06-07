@@ -4,18 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Odontograma · Generador de contexto FDI</title>
-
-<script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="$i ji init en nn Ar tn an Yi capture calculateEventProperties dn register register_once register_for_session unregister unregister_for_session gn getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync mn identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty fn hn createPersonProfile setInternalOrTestUser pn Ji opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing un debug Dr vn getPageViewId captureTraceFeedback captureTraceMetric Zi".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    posthog.init('phc_mLu6HCk4DkjPQ3L7qYTRqB7b9VCgBAYxKQWtxtR7KkCf', {
-        api_host: 'https://us.i.posthog.com',
-        autocapture: true,
-        persistence: 'localStorage',
-        defaults: '2026-05-30',
-        person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
-    })
-</script>
-  
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -54,6 +42,16 @@
   .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;}
   .btn.primary:hover{background:var(--accent-deep);border-color:var(--accent-deep);color:#fff;}
   .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 20px;margin-bottom:18px;}
+  .help{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);margin:18px 0;overflow:hidden;}
+  .help>summary{list-style:none;cursor:pointer;padding:14px 18px;font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:14.5px;display:flex;align-items:center;gap:9px;color:var(--accent-deep);}
+  .help>summary::-webkit-details-marker{display:none;}
+  .help>summary .chev{margin-left:auto;transition:.2s;color:var(--muted);}
+  .help[open]>summary .chev{transform:rotate(180deg);}
+  .help .hb{padding:0 20px 18px;font-size:13.5px;color:var(--ink);}
+  .help .hb h4{font-family:"Fraunces",serif;font-weight:600;font-size:14px;margin:14px 0 5px;}
+  .help .hb p{margin:5px 0;} .help .hb ul{margin:5px 0;padding-left:18px;} .help .hb li{margin:3px 0;}
+  .help .hb b{color:var(--accent-deep);}
+  .help .tip{margin-top:12px;padding:10px 12px;background:var(--accent-soft);border-radius:9px;font-size:12.8px;color:var(--accent-deep);}
   .block-title{font-family:"Fraunces",serif;font-weight:600;font-size:16px;margin:6px 2px 10px;color:var(--ink);}
   .arch-block{margin-bottom:14px;}
   .arch-side{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;margin:0 4px 4px;}
@@ -136,6 +134,31 @@
       Numeración FDI garantizada — no se puede introducir un diente fuera de rango
     </div>
   </header>
+
+  <details class="help">
+    <summary>Cómo se usa esta herramienta <span class="chev">▾</span></summary>
+    <div class="hb">
+      <h4>1. Elegí la dentición (una sola)</h4>
+      <ul>
+        <li><b>Permanente</b>: paciente con dientes permanentes (lo habitual en adultos y adolescentes).</li>
+        <li><b>Temporal</b>: solo dientes de leche (niños pequeños, antes del recambio).</li>
+        <li><b>Mixta</b>: conviven dientes de leche y permanentes (transición, ~6 a 12 años).</li>
+      </ul>
+
+      <h4>2. Marcá los dientes (el criterio cambia según el modo)</h4>
+      <p><b>Permanente y Temporal → marcás solo las excepciones.</b> Tocás únicamente los dientes ausentes, implantes, incluidos/retenidos, en desarrollo o con tratamiento previo. Todo lo que no tocás se asume presente y sano. Es lo más rápido.</p>
+      <p><b>Mixta → marcás lo que está presente.</b> Tocás cada pieza que está en boca y le ponés su estado; lo que dejás sin tocar se considera no presente. En transición no se puede asumir una dentición completa.</p>
+
+      <h4>3. Estados disponibles</h4>
+      <p>Presente/sano · Ausente · Implante · Incluido/retenido (existe pero no erupcionado, p. ej. cordal impactado) · En desarrollo (germen o pieza erupcionando).</p>
+      <p>Tratamientos previos: obturación (con superficies), corona, endodoncia, prótesis fija, provisional, sellador.</p>
+
+      <h4>4. Generá el texto</h4>
+      <p>Escribí las notas y el contexto clínico (opcionales) y tocá <b>Copiar odontograma actual</b>. Pegá ese texto junto con la radiografía en el modelo.</p>
+
+      <div class="tip">Marcar una corona u obturación es solo el estado de base del diente, no una patología. Si esa pieza tiene un problema (fractura, caries secundaria), lo detecta el modelo desde la radiografía.</div>
+    </div>
+  </details>
 
   <div class="seg" id="dentToggle">
     <button data-dent="permanente" class="active">Permanente</button>
