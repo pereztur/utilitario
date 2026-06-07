@@ -4,18 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Odontograma · Generador de contexto FDI</title>
-
-<script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="$i ji init en nn Ar tn an Yi capture calculateEventProperties dn register register_once register_for_session unregister unregister_for_session gn getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync mn identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty fn hn createPersonProfile setInternalOrTestUser pn Ji opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing un debug Dr vn getPageViewId captureTraceFeedback captureTraceMetric Zi".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    posthog.init('phc_mLu6HCk4DkjPQ3L7qYTRqB7b9VCgBAYxKQWtxtR7KkCf', {
-        api_host: 'https://us.i.posthog.com',
-        autocapture: true,
-        persistence: 'localStorage',
-        defaults: '2026-05-30',
-        person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
-    })
-</script>
-  
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -26,34 +14,25 @@
     --accent:#0f766e; --accent-deep:#0b4f49; --accent-soft:#d7ebe7;
     --absent:#b14a35; --absent-soft:#f0dcd4;
     --implant:#2a5d9e; --implant-soft:#dbe6f2;
-    --enamel:#efe8da; --enamel-line:#cdbfa3;
-    --palate:#e9c7c4;
-    --shadow:0 1px 2px rgba(27,42,39,.06),0 8px 24px rgba(27,42,39,.08);
-    --radius:14px;
+    --incl:#b67d12; --incl-soft:#f4e7c6;
+    --dev:#6f63a6; --dev-soft:#e6e2f1;
+    --enamel:#efe8da; --enamel-line:#cdbfa3; --palate:#e9c7c4;
+    --shadow:0 1px 2px rgba(27,42,39,.06),0 8px 24px rgba(27,42,39,.08); --radius:14px;
   }
-  *{box-sizing:border-box;}
-  html,body{margin:0;}
-  body{
-    font-family:"IBM Plex Sans",sans-serif;color:var(--ink);
-    background:radial-gradient(1200px 600px at 80% -10%, #f7f4ec 0%, transparent 60%),var(--paper);
-    line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;padding:28px 18px 64px;
-  }
-  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.4;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");}
+  *{box-sizing:border-box;} html,body{margin:0;}
+  body{font-family:"IBM Plex Sans",sans-serif;color:var(--ink);background:radial-gradient(1200px 600px at 80% -10%, #f7f4ec 0%, transparent 60%),var(--paper);line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;padding:28px 18px 64px;}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.4;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");}
   .wrap{max-width:980px;margin:0 auto;position:relative;z-index:1;}
-
-  header{margin-bottom:20px;}
+  header{margin-bottom:18px;}
   .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:500;}
   h1{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(28px,4.4vw,42px);margin:.18em 0 .12em;letter-spacing:-.01em;line-height:1.05;}
   .sub{color:var(--muted);font-size:14.5px;max-width:62ch;}
   .badge-secure{display:inline-flex;align-items:center;gap:7px;margin-top:14px;background:var(--accent-soft);color:var(--accent-deep);border:1px solid #b9ddd6;border-radius:999px;padding:5px 13px;font-size:12.5px;font-weight:500;font-family:"IBM Plex Mono",monospace;}
   .badge-secure svg{width:14px;height:14px;}
-
-  /* segmented dentition toggle */
-  .seg{display:inline-flex;background:var(--surface-2);border:1px solid var(--line-strong);border-radius:12px;padding:4px;gap:4px;margin:20px 0 4px;}
+  .seg{display:inline-flex;background:var(--surface-2);border:1px solid var(--line-strong);border-radius:12px;padding:4px;gap:4px;margin:20px 0 4px;flex-wrap:wrap;}
   .seg button{font-family:"IBM Plex Sans",sans-serif;font-size:13.5px;font-weight:600;border:none;background:transparent;color:var(--muted);padding:8px 18px;border-radius:9px;cursor:pointer;transition:.15s;}
   .seg button.active{background:var(--accent);color:#fff;box-shadow:0 2px 8px rgba(15,118,110,.25);}
-
+  .mode-hint{font-size:12.5px;color:var(--muted);margin:8px 2px 0;font-style:italic;}
   .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0 16px;}
   .btn{font-family:"IBM Plex Sans",sans-serif;font-size:13.5px;font-weight:500;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);padding:9px 14px;border-radius:10px;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:7px;}
   .btn:hover{border-color:var(--accent);color:var(--accent-deep);transform:translateY(-1px);}
@@ -62,50 +41,48 @@
   .btn.danger:hover{border-color:var(--absent);color:var(--absent);}
   .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;}
   .btn.primary:hover{background:var(--accent-deep);border-color:var(--accent-deep);color:#fff;}
-
   .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 20px;margin-bottom:18px;}
-
-  /* arch stage */
+  .block-title{font-family:"Fraunces",serif;font-weight:600;font-size:16px;margin:6px 2px 10px;color:var(--ink);}
+  .arch-block{margin-bottom:14px;}
   .arch-side{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;margin:0 4px 4px;}
   .arch-side b{color:var(--ink);}
   .stage-wrap{position:relative;width:100%;}
   .stage{position:absolute;top:0;left:50%;width:660px;height:600px;transform-origin:top center;}
   .palate{position:absolute;left:50%;transform:translateX(-50%);border-radius:50%;filter:blur(2px);z-index:0;}
-  .palate.u{top:70px;width:360px;height:200px;background:radial-gradient(ellipse at center 60%, var(--palate) 0%, #f0dad7 55%, transparent 75%);opacity:.55;}
-  .palate.l{top:330px;width:360px;height:200px;background:radial-gradient(ellipse at center 40%, #e7ddcf 0%, transparent 72%);opacity:.6;}
+  .palate.u{top:70px;width:360px;height:200px;background:radial-gradient(ellipse at center 60%, var(--palate) 0%, #f0dad7 55%, transparent 75%);opacity:.5;}
+  .palate.l{top:330px;width:360px;height:200px;background:radial-gradient(ellipse at center 40%, #e7ddcf 0%, transparent 72%);opacity:.55;}
   .mid{position:absolute;left:50%;top:60px;bottom:60px;width:1px;background:repeating-linear-gradient(var(--line-strong) 0 6px, transparent 6px 12px);z-index:1;}
-  .arch-mid-lbl{position:absolute;left:50%;transform:translateX(-50%);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);z-index:2;}
-
   .quad-tag{position:absolute;font-family:"Fraunces",serif;font-weight:600;font-size:13px;color:var(--muted);opacity:.6;z-index:1;}
-
-  .tooth{position:absolute;width:44px;height:52px;transform:translate(-50%,-50%) rotate(var(--rot));transform-origin:center;
-    background:linear-gradient(155deg,#fff,var(--enamel));border:1.6px solid var(--enamel-line);
-    border-radius:46% 46% 40% 40% / 55% 55% 48% 48%;cursor:pointer;z-index:3;transition:transform .12s, box-shadow .12s, border-color .12s, background .12s;
-    display:flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(0,0,0,.06);}
+  .tooth{position:absolute;width:44px;height:52px;transform:translate(-50%,-50%) rotate(var(--rot));transform-origin:center;background:linear-gradient(155deg,#fff,var(--enamel));border:1.6px solid var(--enamel-line);border-radius:46% 46% 40% 40% / 55% 55% 48% 48%;cursor:pointer;z-index:3;transition:transform .12s, box-shadow .12s, border-color .12s, background .12s, opacity .12s;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(0,0,0,.06);}
   .stage[data-dent="temporal"] .tooth{width:48px;height:54px;}
   .tooth::after{content:"";position:absolute;top:18%;left:22%;right:22%;height:2px;background:var(--enamel-line);opacity:.5;border-radius:2px;transform:rotate(calc(-1*var(--rot)));}
   .tooth:hover{border-color:var(--accent);box-shadow:0 6px 16px rgba(15,118,110,.22);}
   .tooth .num{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:13.5px;color:var(--ink);display:block;transform:rotate(calc(-1*var(--rot)));}
   .tooth .badges{position:absolute;bottom:-3px;left:50%;transform:translateX(-50%) rotate(calc(-1*var(--rot)));display:flex;gap:2px;white-space:nowrap;}
   .tooth .badges span{font-family:"IBM Plex Mono",monospace;font-size:8px;font-weight:600;background:var(--accent);color:#fff;border-radius:3px;padding:1px 3px;line-height:1.2;}
-  /* states */
   .tooth.ausente{background:repeating-linear-gradient(45deg,var(--absent-soft) 0 5px,#f6e2db 5px 10px);border-color:var(--absent);border-style:dashed;box-shadow:none;}
   .tooth.ausente .num{color:var(--absent);text-decoration:line-through;text-decoration-thickness:2px;}
   .tooth.ausente::after{display:none;}
   .tooth.implante{background:linear-gradient(155deg,#eef4fb,var(--implant-soft));border-color:var(--implant);}
-  .tooth.implante .num{color:var(--implant);}
+  .tooth.implante .num{color:var(--implant);} .tooth.implante .badges span{background:var(--implant);}
+  .tooth.incluido{background:linear-gradient(155deg,#fbf3df,var(--incl-soft));border-color:var(--incl);border-style:dashed;}
+  .tooth.incluido .num{color:var(--incl);} .tooth.incluido .badges span{background:var(--incl);}
+  .tooth.desarrollo{background:linear-gradient(155deg,#f1eef8,var(--dev-soft));border-color:var(--dev);border-style:dotted;}
+  .tooth.desarrollo .num{color:var(--dev);} .tooth.desarrollo .badges span{background:var(--dev);}
   .tooth.tratado{background:linear-gradient(155deg,#eaf6f3,var(--accent-soft));border-color:var(--accent);}
-
-  .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px;font-size:12px;color:var(--muted);}
+  .tooth.ghost{opacity:.3;border-style:dashed;border-color:var(--line-strong);background:#efeee9;box-shadow:none;}
+  .tooth.ghost::after{display:none;} .tooth.ghost .num{color:var(--muted);}
+  .legend{display:flex;flex-wrap:wrap;gap:13px;margin-top:8px;font-size:12px;color:var(--muted);}
   .legend i{display:inline-block;width:13px;height:13px;border-radius:4px;border:1.6px solid var(--enamel-line);vertical-align:-2px;margin-right:5px;background:linear-gradient(155deg,#fff,var(--enamel));}
   .legend .lg-aus i{border-color:var(--absent);border-style:dashed;background:var(--absent-soft);}
   .legend .lg-imp i{border-color:var(--implant);background:var(--implant-soft);}
+  .legend .lg-inc i{border-color:var(--incl);border-style:dashed;background:var(--incl-soft);}
+  .legend .lg-dev i{border-color:var(--dev);border-style:dotted;background:var(--dev-soft);}
   .legend .lg-trt i{border-color:var(--accent);background:var(--accent-soft);}
-
-  /* modal */
+  .legend .lg-ghost i{border-style:dashed;background:#efeee9;opacity:.5;}
   .overlay{position:fixed;inset:0;background:rgba(20,30,28,.42);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;padding:20px;z-index:50;}
   .overlay.show{display:flex;}
-  .modal{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(20,30,28,.28);width:min(420px,100%);padding:22px 22px 18px;animation:pop .18s ease;}
+  .modal{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(20,30,28,.28);width:min(440px,100%);padding:22px 22px 18px;animation:pop .18s ease;max-height:92vh;overflow:auto;}
   @keyframes pop{from{opacity:0;transform:scale(.96) translateY(8px);}to{opacity:1;transform:none;}}
   .modal h3{font-family:"Fraunces",serif;font-weight:600;margin:0 0 2px;font-size:22px;}
   .modal .tooth-id{font-family:"IBM Plex Mono",monospace;color:var(--accent);font-size:13px;}
@@ -117,12 +94,13 @@
   .chip.on{background:var(--accent);border-color:var(--accent);color:#fff;}
   .chip.danger.on{background:var(--absent);border-color:var(--absent);}
   .chip.implant.on{background:var(--implant);border-color:var(--implant);}
+  .chip.inc.on{background:var(--incl);border-color:var(--incl);}
+  .chip.dev.on{background:var(--dev);border-color:var(--dev);}
   .surf-wrap{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);display:none;}
   .surf-wrap.show{display:block;}
   .surf-wrap .mini{font-size:11px;color:var(--muted);margin-bottom:7px;}
   .modal-actions{display:flex;gap:10px;margin-top:20px;}
   .modal-actions .btn{flex:1;justify-content:center;}
-
   .io-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
   .io-head h2{font-family:"Fraunces",serif;font-weight:600;font-size:20px;margin:0;}
   textarea,.out{width:100%;font-family:"IBM Plex Mono",monospace;font-size:13px;line-height:1.6;border:1px solid var(--line);border-radius:11px;background:var(--surface-2);color:var(--ink);padding:13px 14px;resize:vertical;}
@@ -140,7 +118,7 @@
   <header>
     <div class="eyebrow">Apoyo diagnóstico · Radiografía odontológica</div>
     <h1>Odontograma</h1>
-    <p class="sub">Marcá ausencias y tratamientos previos sobre la arcada. El texto del odontograma se arma solo.</p>
+    <p class="sub">Marcá el estado de las piezas sobre la arcada. El texto del odontograma se arma solo.</p>
     <div class="badge-secure">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
       Numeración FDI garantizada — no se puede introducir un diente fuera de rango
@@ -148,37 +126,34 @@
   </header>
 
   <div class="seg" id="dentToggle">
-    <button data-dent="permanente" class="active">Dentición permanente</button>
-    <button data-dent="temporal">Dentición temporal</button>
+    <button data-dent="permanente" class="active">Permanente</button>
+    <button data-dent="temporal">Temporal</button>
+    <button data-dent="mixta">Mixta</button>
   </div>
+  <p class="mode-hint" id="modeHint"></p>
 
   <div class="toolbar">
     <button class="btn" id="noThirdMolars" title="Marca 18, 28, 38 y 48 como ausentes">⊘ Sin terceros molares</button>
-    <button class="btn ghost danger" id="resetAll">↺ Reiniciar dentición</button>
+    <button class="btn ghost danger" id="resetAll">↺ Reiniciar</button>
   </div>
 
   <div class="panel">
-    <div class="arch-side"><span>Derecha del paciente · <b>R</b></span><span id="upLbl">Maxilar superior</span><span><b>L</b> · Izquierda del paciente</span></div>
-    <div class="stage-wrap" id="stageWrap">
-      <div class="stage" id="stage" data-dent="permanente">
-        <div class="palate u"></div>
-        <div class="palate l"></div>
-        <div class="mid"></div>
-      </div>
-    </div>
-    <div class="arch-side" style="margin-top:4px;"><span>Derecha del paciente · <b>R</b></span><span id="lowLbl">Mandíbula inferior</span><span><b>L</b> · Izquierda del paciente</span></div>
+    <div id="stages"></div>
     <div class="legend">
       <span class="lg-sane"><i></i>Presente y sano</span>
       <span class="lg-aus"><i></i>Ausente</span>
       <span class="lg-imp"><i></i>Implante</span>
+      <span class="lg-inc"><i></i>Incluido / retenido</span>
+      <span class="lg-dev"><i></i>En desarrollo</span>
       <span class="lg-trt"><i></i>Con tratamiento previo</span>
+      <span class="lg-ghost"><i></i>No presente (mixta)</span>
       <span>· Tocá un diente para editarlo</span>
     </div>
   </div>
 
   <div class="panel">
     <div class="io-head"><h2>Notas del odontograma</h2></div>
-    <textarea id="notas" rows="2" placeholder="Opcional: aclaraciones del odontograma (p. ej. raíz residual en 36, agenesia de 35…)."></textarea>
+    <textarea id="notas" rows="2" placeholder="Opcional: aclaraciones (p. ej. raíz residual en 36, 38 horizontal cerca del conducto…)."></textarea>
   </div>
 
   <div class="panel">
@@ -209,6 +184,8 @@
         <span class="chip" data-estado="sano">Presente / sano</span>
         <span class="chip danger" data-estado="ausente">Ausente</span>
         <span class="chip implant" data-estado="implante">Implante</span>
+        <span class="chip inc" data-estado="incluido">Incluido / retenido</span>
+        <span class="chip dev" data-estado="desarrollo">En desarrollo</span>
       </div>
     </div>
     <div class="field" id="treatField">
@@ -224,10 +201,8 @@
       <div class="surf-wrap" id="surfWrap">
         <div class="mini">Superficies de la obturación</div>
         <div class="chips" id="surfChips">
-          <span class="chip" data-surf="M">M</span>
-          <span class="chip" data-surf="O">O/I</span>
-          <span class="chip" data-surf="D">D</span>
-          <span class="chip" data-surf="V">V</span>
+          <span class="chip" data-surf="M">M</span><span class="chip" data-surf="O">O/I</span>
+          <span class="chip" data-surf="D">D</span><span class="chip" data-surf="V">V</span>
           <span class="chip" data-surf="L">L/P</span>
         </div>
       </div>
@@ -240,97 +215,98 @@
 </div>
 
 <script>
-const SETS={
-  permanente:{
-    upper:[18,17,16,15,14,13,12,11,21,22,23,24,25,26,27,28],
-    lower:[48,47,46,45,44,43,42,41,31,32,33,34,35,36,37,38],
-    geom:{cx:330,a:276,b:152,uy:236,ly:364,fan:116},
-    quads:{up:["Cuadrante 1","Cuadrante 2"],low:["Cuadrante 4","Cuadrante 3"]}
-  },
-  temporal:{
-    upper:[55,54,53,52,51,61,62,63,64,65],
-    lower:[85,84,83,82,81,71,72,73,74,75],
-    geom:{cx:330,a:215,b:128,uy:232,ly:368,fan:96},
-    quads:{up:["Cuadrante 5","Cuadrante 6"],low:["Cuadrante 8","Cuadrante 7"]}
-  }
+const ARCH={
+  permU:{seq:[18,17,16,15,14,13,12,11,21,22,23,24,25,26,27,28],up:true},
+  permL:{seq:[48,47,46,45,44,43,42,41,31,32,33,34,35,36,37,38],up:false},
+  tempU:{seq:[55,54,53,52,51,61,62,63,64,65],up:true},
+  tempL:{seq:[85,84,83,82,81,71,72,73,74,75],up:false}
 };
-const ALL=[...SETS.permanente.upper,...SETS.permanente.lower,...SETS.temporal.upper,...SETS.temporal.lower];
+const GEOM_PERM={cx:330,a:276,b:152,uy:236,ly:364,fan:116};
+const GEOM_TEMP={cx:330,a:215,b:128,uy:232,ly:368,fan:96};
+const QUAD={perm:{up:["Cuadrante 1","Cuadrante 2"],low:["Cuadrante 4","Cuadrante 3"]},
+            temp:{up:["Cuadrante 5","Cuadrante 6"],low:["Cuadrante 8","Cuadrante 7"]}};
+const PERM=[...ARCH.permU.seq,...ARCH.permL.seq];
+const TEMP=[...ARCH.tempU.seq,...ARCH.tempL.seq];
+const ALL=[...PERM,...TEMP];
 
-const ZONE=f=>({
-  "1":"Cuadrante 1 · superior derecho","2":"Cuadrante 2 · superior izquierdo",
-  "3":"Cuadrante 3 · inferior izquierdo","4":"Cuadrante 4 · inferior derecho",
-  "5":"Cuadrante 5 · superior derecho (temporal)","6":"Cuadrante 6 · superior izquierdo (temporal)",
-  "7":"Cuadrante 7 · inferior izquierdo (temporal)","8":"Cuadrante 8 · inferior derecho (temporal)"
-}[String(f)[0]]||"");
+const ZONE=f=>({"1":"Cuadrante 1 · superior derecho","2":"Cuadrante 2 · superior izquierdo","3":"Cuadrante 3 · inferior izquierdo","4":"Cuadrante 4 · inferior derecho","5":"Cuadrante 5 · superior derecho (temporal)","6":"Cuadrante 6 · superior izquierdo (temporal)","7":"Cuadrante 7 · inferior izquierdo (temporal)","8":"Cuadrante 8 · inferior derecho (temporal)"}[String(f)[0]]||"");
 
-const blank=()=>({presence:"sano",obturacion:false,surfaces:[],corona:false,endodoncia:false,protesis_fija:false,provisional:false,sellador:false});
+const blank=()=>({presence:null,obturacion:false,surfaces:[],corona:false,endodoncia:false,protesis_fija:false,provisional:false,sellador:false});
 const STATE={};ALL.forEach(f=>STATE[f]=blank());
 
-let DENT="permanente";
-let current=null;
-const stage=document.getElementById('stage');
+let DENT="permanente",current=null;
+const stagesEl=document.getElementById('stages');
+let STAGES=[];
 
-function activeSet(){return SETS[DENT];}
+function activeTeeth(){return DENT==='permanente'?PERM:DENT==='temporal'?TEMP:ALL;}
+function effPresence(f){const p=STATE[f].presence;if(p)return p;return DENT==='mixta'?'no_presente':'sano';}
 function hasTreatment(s){return s.obturacion||s.corona||s.endodoncia||s.protesis_fija||s.provisional||s.sellador;}
 
-function placeArch(seq,isUpper,g){
-  const n=seq.length;
-  seq.forEach((f,i)=>{
-    const p=n===1?0.5:i/(n-1);
-    const ang=Math.PI*(1-p);
-    const x=g.cx+g.a*Math.cos(ang);
+function placeArch(stage,arch,g,dent){
+  const n=arch.seq.length;
+  arch.seq.forEach((f,i)=>{
+    const p=n===1?0.5:i/(n-1),ang=Math.PI*(1-p),x=g.cx+g.a*Math.cos(ang);
     let y,rot;
-    if(isUpper){y=g.uy-g.b*Math.sin(ang);rot=(p-0.5)*g.fan;}
+    if(arch.up){y=g.uy-g.b*Math.sin(ang);rot=(p-0.5)*g.fan;}
     else{y=g.ly+g.b*Math.sin(ang);rot=180+(0.5-p)*g.fan;}
     const t=document.createElement('button');
     t.className='tooth';t.dataset.fdi=f;
-    t.style.left=(x/660*100)+'%';t.style.top=(y/600*100)+'%';
-    t.style.setProperty('--rot',rot.toFixed(1)+'deg');
+    t.style.left=(x/660*100)+'%';t.style.top=(y/600*100)+'%';t.style.setProperty('--rot',rot.toFixed(1)+'deg');
     t.innerHTML=`<span class="num">${f}</span><span class="badges"></span>`;
     t.addEventListener('click',()=>openModal(f));
     stage.appendChild(t);
   });
 }
-function quadLabels(g,quads){
+function buildStage(set,title){
+  const block=document.createElement('div');block.className='arch-block';
+  const isTemp=set==='temp';const g=isTemp?GEOM_TEMP:GEOM_PERM;const q=isTemp?QUAD.temp:QUAD.perm;
+  const uSeq=isTemp?ARCH.tempU:ARCH.permU,lSeq=isTemp?ARCH.tempL:ARCH.permL;
+  block.innerHTML=(title?`<div class="block-title">${title}</div>`:'')+
+    `<div class="arch-side"><span>Derecha del paciente · <b>R</b></span><span>${isTemp?'Maxilar superior (temporal)':'Maxilar superior'}</span><span><b>L</b> · Izquierda</span></div>
+     <div class="stage-wrap"><div class="stage" data-dent="${isTemp?'temporal':'permanente'}"><div class="palate u"></div><div class="palate l"></div><div class="mid"></div></div></div>
+     <div class="arch-side" style="margin-top:4px;"><span>Derecha del paciente · <b>R</b></span><span>${isTemp?'Mandíbula inferior (temporal)':'Mandíbula inferior'}</span><span><b>L</b> · Izquierda</span></div>`;
+  stagesEl.appendChild(block);
+  const stage=block.querySelector('.stage'),wrap=block.querySelector('.stage-wrap');
   const mk=(txt,x,y)=>{const d=document.createElement('div');d.className='quad-tag';d.textContent=txt;d.style.left=(x/660*100)+'%';d.style.top=(y/600*100)+'%';d.style.transform='translate(-50%,-50%)';stage.appendChild(d);};
-  mk(quads.up[0],230,150);mk(quads.up[1],430,150);
-  mk(quads.low[0],230,452);mk(quads.low[1],430,452);
+  mk(q.up[0],230,150);mk(q.up[1],430,150);mk(q.low[0],230,452);mk(q.low[1],430,452);
+  placeArch(stage,uSeq,g);placeArch(stage,lSeq,g);
+  STAGES.push({stage,wrap});
 }
-function buildStage(){
-  [...stage.querySelectorAll('.tooth,.quad-tag')].forEach(e=>e.remove());
-  stage.dataset.dent=DENT;
-  const s=activeSet();
-  quadLabels(s.geom,s.quads);
-  placeArch(s.upper,true,s.geom);
-  placeArch(s.lower,false,s.geom);
-  renderAll();
+function buildStages(){
+  stagesEl.innerHTML='';STAGES=[];
+  if(DENT==='permanente')buildStage('perm',null);
+  else if(DENT==='temporal')buildStage('temp',null);
+  else{buildStage('perm','Dientes permanentes');buildStage('temp','Dientes temporales');}
+  document.getElementById('noThirdMolars').style.display=(DENT==='temporal')?'none':'';
+  document.getElementById('modeHint').textContent= DENT==='mixta'
+    ? 'Dentición mixta: tocá las piezas presentes y marcá su estado. Las que dejes sin tocar se consideran no presentes.'
+    : 'Marcá solo las ausencias y los tratamientos previos. El resto se asume presente y sano.';
+  renderAll();fitAll();
 }
 
 function renderTooth(f){
-  const s=STATE[f];const el=stage.querySelector(`.tooth[data-fdi="${f}"]`);if(!el)return;
-  el.classList.remove('ausente','implante','tratado');
-  const badges=el.querySelector('.badges');badges.innerHTML='';
-  if(s.presence==='ausente'){el.classList.add('ausente');return;}
-  if(s.presence==='implante'){el.classList.add('implante');badges.innerHTML='<span>Imp</span>';return;}
-  if(hasTreatment(s)){
-    el.classList.add('tratado');
-    let c=[];
+  const el=stagesEl.querySelector(`.tooth[data-fdi="${f}"]`);if(!el)return;
+  const s=STATE[f],pr=effPresence(f),b=el.querySelector('.badges');
+  el.classList.remove('ausente','implante','incluido','desarrollo','tratado','ghost');b.innerHTML='';
+  if(pr==='no_presente'){el.classList.add('ghost');return;}
+  if(pr==='ausente'){el.classList.add('ausente');return;}
+  if(pr==='implante'){el.classList.add('implante');b.innerHTML='<span>Imp</span>';return;}
+  if(pr==='incluido'){el.classList.add('incluido');b.innerHTML='<span>Inc</span>';return;}
+  if(pr==='desarrollo'){el.classList.add('desarrollo');b.innerHTML='<span>Des</span>';return;}
+  if(hasTreatment(s)){el.classList.add('tratado');let c=[];
     if(s.obturacion)c.push(s.surfaces.length?s.surfaces.join(''):'Ob');
-    if(s.corona)c.push('Co');if(s.endodoncia)c.push('En');
-    if(s.protesis_fija)c.push('PF');if(s.provisional)c.push('Pv');if(s.sellador)c.push('Se');
-    badges.innerHTML=c.map(x=>`<span>${x}</span>`).join('');
-  }
+    if(s.corona)c.push('Co');if(s.endodoncia)c.push('En');if(s.protesis_fija)c.push('PF');if(s.provisional)c.push('Pv');if(s.sellador)c.push('Se');
+    b.innerHTML=c.map(x=>`<span>${x}</span>`).join('');}
 }
-function renderAll(){const s=activeSet();[...s.upper,...s.lower].forEach(renderTooth);generate();}
+function renderAll(){activeTeeth().forEach(renderTooth);generate();}
 
-/* modal */
 const overlay=document.getElementById('overlay');
 function openModal(f){current=f;document.getElementById('mTooth').textContent=f;document.getElementById('mZone').textContent=ZONE(f);syncModal();overlay.classList.add('show');}
 function syncModal(){
-  const s=STATE[current];
-  document.querySelectorAll('#estadoChips .chip').forEach(c=>c.classList.toggle('on',c.dataset.estado===s.presence));
-  const tr=s.presence==='sano';
-  const tf=document.getElementById('treatField');tf.style.opacity=tr?'1':'.4';tf.style.pointerEvents=tr?'auto':'none';
+  const s=STATE[current],pr=effPresence(current);
+  document.querySelectorAll('#estadoChips .chip').forEach(c=>c.classList.toggle('on',c.dataset.estado===pr));
+  const tr=pr==='sano';const tf=document.getElementById('treatField');
+  tf.style.opacity=tr?'1':'.4';tf.style.pointerEvents=tr?'auto':'none';
   document.querySelectorAll('#treatChips .chip').forEach(c=>c.classList.toggle('on',!!s[c.dataset.trt]));
   document.getElementById('surfWrap').classList.toggle('show',tr&&s.obturacion);
   document.querySelectorAll('#surfChips .chip').forEach(c=>c.classList.toggle('on',s.surfaces.includes(c.dataset.surf)));
@@ -341,7 +317,8 @@ document.querySelectorAll('#estadoChips .chip').forEach(c=>c.addEventListener('c
   syncModal();renderTooth(current);generate();
 }));
 document.querySelectorAll('#treatChips .chip').forEach(c=>c.addEventListener('click',()=>{
-  const s=STATE[current],k=c.dataset.trt;s[k]=!s[k];if(k==='obturacion'&&!s.obturacion)s.surfaces=[];
+  const s=STATE[current],k=c.dataset.trt;if(effPresence(current)!=='sano')return;
+  s[k]=!s[k];if(k==='obturacion'&&!s.obturacion)s.surfaces=[];
   syncModal();renderTooth(current);generate();
 }));
 document.querySelectorAll('#surfChips .chip').forEach(c=>c.addEventListener('click',()=>{
@@ -355,67 +332,54 @@ document.getElementById('mDone').addEventListener('click',()=>overlay.classList.
 overlay.addEventListener('click',e=>{if(e.target===overlay)overlay.classList.remove('show');});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')overlay.classList.remove('show');});
 
-/* dentition toggle */
-document.getElementById('dentToggle').addEventListener('click',e=>{
-  const b=e.target.closest('button');if(!b)return;
-  DENT=b.dataset.dent;
-  document.querySelectorAll('#dentToggle button').forEach(x=>x.classList.toggle('active',x===b));
-  document.getElementById('upLbl').textContent= DENT==='temporal'?'Maxilar superior (temporal)':'Maxilar superior';
-  document.getElementById('lowLbl').textContent= DENT==='temporal'?'Mandíbula inferior (temporal)':'Mandíbula inferior';
-  document.getElementById('noThirdMolars').style.display= DENT==='temporal'?'none':'';
-  buildStage();
-});
-
-/* quick actions */
+document.getElementById('dentToggle').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  DENT=b.dataset.dent;document.querySelectorAll('#dentToggle button').forEach(x=>x.classList.toggle('active',x===b));buildStages();});
 document.getElementById('noThirdMolars').addEventListener('click',()=>{[18,28,38,48].forEach(f=>{STATE[f]=blank();STATE[f].presence='ausente';});renderAll();});
-document.getElementById('resetAll').addEventListener('click',()=>{const s=activeSet();[...s.upper,...s.lower].forEach(f=>STATE[f]=blank());document.getElementById('notas').value='';renderAll();});
+document.getElementById('resetAll').addEventListener('click',()=>{activeTeeth().forEach(f=>STATE[f]=blank());document.getElementById('notas').value='';renderAll();});
 document.getElementById('notas').addEventListener('input',generate);
 document.getElementById('contexto').addEventListener('input',generate);
 
-/* generation */
 function sortFdi(a){return a.slice().sort((x,y)=>x-y);}
-function collect(pred){const s=activeSet();return sortFdi([...s.upper,...s.lower].filter(f=>pred(STATE[f])));}
 function generate(){
-  const s=activeSet(),all=[...s.upper,...s.lower];
+  const teeth=activeTeeth(),eff=f=>effPresence(f);
   const lines=[`denticion: ${DENT}`];
-  const ausentes=collect(x=>x.presence==='ausente');
-  const implantes=collect(x=>x.presence==='implante');
-  const restaurados=all.filter(f=>STATE[f].presence==='sano'&&STATE[f].obturacion);
-  const endo=collect(x=>x.presence==='sano'&&x.endodoncia);
-  const coronas=collect(x=>x.presence==='sano'&&x.corona);
-  const pfija=collect(x=>x.presence==='sano'&&x.protesis_fija);
-  const provis=collect(x=>x.presence==='sano'&&x.provisional);
-  const sella=collect(x=>x.presence==='sano'&&x.sellador);
+  if(DENT==='mixta'){const pres=teeth.filter(f=>eff(f)==='sano');if(pres.length)lines.push(`presentes: ${sortFdi(pres).join(', ')}`);}
+  const ausentes=teeth.filter(f=>eff(f)==='ausente');
+  const incl=teeth.filter(f=>eff(f)==='incluido');
+  const desa=teeth.filter(f=>eff(f)==='desarrollo');
+  const impl=teeth.filter(f=>eff(f)==='implante');
+  const rest=teeth.filter(f=>eff(f)==='sano'&&STATE[f].obturacion);
+  const endo=teeth.filter(f=>eff(f)==='sano'&&STATE[f].endodoncia);
+  const coro=teeth.filter(f=>eff(f)==='sano'&&STATE[f].corona);
+  const pfij=teeth.filter(f=>eff(f)==='sano'&&STATE[f].protesis_fija);
+  const prov=teeth.filter(f=>eff(f)==='sano'&&STATE[f].provisional);
+  const sell=teeth.filter(f=>eff(f)==='sano'&&STATE[f].sellador);
   const notas=document.getElementById('notas').value.trim();
-  let any=false;
-  if(ausentes.length){lines.push(`ausentes: ${ausentes.join(', ')}`);any=true;}
-  if(implantes.length){lines.push(`implantes: ${implantes.join(', ')}`);any=true;}
-  if(restaurados.length){lines.push(`restaurados/obturados: ${sortFdi(restaurados).map(f=>{const sf=STATE[f].surfaces;return sf.length?`${f} (${sf.join(',')})`:`${f}`;}).join(', ')}`);any=true;}
-  if(endo.length){lines.push(`endodonciados: ${endo.join(', ')}`);any=true;}
-  if(coronas.length){lines.push(`coronas: ${coronas.join(', ')}`);any=true;}
-  if(pfija.length){lines.push(`protesis_fija: ${pfija.join(', ')}`);any=true;}
-  if(provis.length){lines.push(`provisional: ${provis.join(', ')}`);any=true;}
-  if(sella.length){lines.push(`sellador: ${sella.join(', ')}`);any=true;}
-  if(notas){lines.push(`notas: ${notas}`);}
-  lines.push(any?'(resto: presente y sano, salvo lo que evalúe la RX)':'(sin ausencias ni tratamientos previos registrados; dentición completa, presente y sana)');
-  const odo=lines.join('\n');
-  document.getElementById('output').textContent=odo;
-  return odo;
+  let any=false;const add=(l)=>{lines.push(l);any=true;};
+  if(ausentes.length)add(`ausentes: ${sortFdi(ausentes).join(', ')}`);
+  if(incl.length)add(`incluidos/retenidos: ${sortFdi(incl).join(', ')}`);
+  if(desa.length)add(`en_desarrollo: ${sortFdi(desa).join(', ')}`);
+  if(impl.length)add(`implantes: ${sortFdi(impl).join(', ')}`);
+  if(rest.length)add(`restaurados/obturados: ${sortFdi(rest).map(f=>{const sf=STATE[f].surfaces;return sf.length?`${f} (${sf.join(',')})`:`${f}`;}).join(', ')}`);
+  if(endo.length)add(`endodonciados: ${sortFdi(endo).join(', ')}`);
+  if(coro.length)add(`coronas: ${sortFdi(coro).join(', ')}`);
+  if(pfij.length)add(`protesis_fija: ${sortFdi(pfij).join(', ')}`);
+  if(prov.length)add(`provisional: ${sortFdi(prov).join(', ')}`);
+  if(sell.length)add(`sellador: ${sortFdi(sell).join(', ')}`);
+  if(notas)lines.push(`notas: ${notas}`);
+  if(DENT==='mixta')lines.push('(en dentición mixta solo se listan las piezas presentes; las no listadas no están en boca o no se especificaron)');
+  else lines.push(any?'(resto: presente y sano, salvo lo que evalúe la RX)':'(sin ausencias ni tratamientos previos registrados; dentición completa, presente y sana)');
+  const odo=lines.join('\n');document.getElementById('output').textContent=odo;return odo;
 }
 
-/* copy */
 function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),1600);}
-async function copyText(txt){
-  try{await navigator.clipboard.writeText(txt);showToast('¡Copiado!');}
-  catch(e){const ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');showToast('¡Copiado!');}catch(_){showToast('Seleccioná y copiá manual');}document.body.removeChild(ta);}
-}
+async function copyText(txt){try{await navigator.clipboard.writeText(txt);showToast('¡Copiado!');}
+  catch(e){const ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');showToast('¡Copiado!');}catch(_){showToast('Seleccioná y copiá manual');}document.body.removeChild(ta);}}
 document.getElementById('copyOdo').addEventListener('click',()=>{const ctx=document.getElementById('contexto').value.trim();copyText(`Odontograma:\n${generate()}\n\nContexto clínico: ${ctx||'—'}`);});
 
-/* responsive scaling */
-const stageWrap=document.getElementById('stageWrap');
-function fit(){const w=stageWrap.clientWidth;const sc=Math.min(1,w/660);stage.style.transform=`translateX(-50%) scale(${sc})`;stageWrap.style.height=(600*sc)+'px';}
-new ResizeObserver(fit).observe(stageWrap);
-buildStage();fit();
+function fitAll(){STAGES.forEach(({stage,wrap})=>{const sc=Math.min(1,wrap.clientWidth/660);stage.style.transform=`translateX(-50%) scale(${sc})`;wrap.style.height=(600*sc)+'px';});}
+new ResizeObserver(fitAll).observe(stagesEl);
+buildStages();
 </script>
 </body>
 </html>
